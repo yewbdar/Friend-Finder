@@ -6,10 +6,16 @@ $(document).ready(function(){
                 photo: "",
                 score: []
             }
-            
-            newUser.name = $("#name").val().trim();
-            newUser.photo = $("#photo").val().trim();
-            
+
+            if($("#name").val().trim() === ""){
+                 alert("please insert your name ")}
+                 else{ newUser.name = $("#name").val().trim()}
+
+            if($("#photo").val().trim() === ""){
+                 alert("please insert your photo link ")}
+                 else{ newUser.name = $("#photo").val().trim()}
+
+
             for (var i = 1; i < 11; i++) {
                 
                 var choice = $("#question" + i).val();

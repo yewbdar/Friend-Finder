@@ -19,7 +19,6 @@ module.exports = function (app) {
       name: "",
       photo: ""
     }
-
     var sum = [];
     friends.forEach(element => {
       var diffrence = [];
@@ -33,7 +32,6 @@ module.exports = function (app) {
       sum.push(diffrence.reduce(getSum))
       console.log(" diff " + diffrence, " sum " + sum)
     });
-
     var index = sum.indexOf(Math.min(...sum));
     console.log(friends[index].name);
     matchFriend.name = friends[index].name;
