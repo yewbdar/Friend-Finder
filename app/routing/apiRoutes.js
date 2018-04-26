@@ -14,10 +14,15 @@ module.exports = function (app) {
 
   app.post("/api/friends", function (req, res) {
 
-    var newUser = {
-      name=req.body.name,
-      photo=req.body.photo,
-      score=req.body.score
+     var newUser = req.body;
+    //  {
+      // name=req.body.name,
+      // photo=req.body.photo,
+      // score=req.body.score
+    // }
+    var matchFriend = {
+      name: "",
+      photo: ""
     }
 
     var sum = [];
@@ -33,15 +38,17 @@ module.exports = function (app) {
       sum.push(diffrence.reduce(getSum))
       console.log(" diff " + diffrence, " sum " + sum)
     });
+
+    var index = sum.indexOf(Math.min(...sum));
+    console.log(friends[index].name);
+    matchFriend.name = friends[index].name;
+    matchFriend.photo = friends[index].photo;
+
+    console.log("matchFriend " + matchFriend)
+     res.json(matchFriend)
     function getSum(total, num) {
       return total + num;
     }
-    var index = sum.indexOf(Math.min(...sum));
-    console.log(friends[index].name);
-    user.name = friends[index].name;
-    user.photo = friends[index].photo;
-
-
 
   });
 }
