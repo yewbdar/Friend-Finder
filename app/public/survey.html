@@ -5,7 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script> -->
     
+    <!-- integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script> -->
+
+
+
     <title>Survey</title>
 </head>
 
@@ -19,17 +25,17 @@
                 <h6>
                     <label>Name (required)</label>
                 </h6>
-                <input id="name" type="text" class="col-lg-12 form-control" />
+                <input id="name" type="text" class="col-lg-12 form-control" required/>
                 <h6>Link to photo image</h6>
-                <input id="image" type="text" class="col-lg-12 form-control" />
+                <input id="photo" type="text" class="col-lg-12 form-control" required/>
                 <hr>
             </div>
             <div class="row col-lg-12">
-                <form class="form" action="/" method="POST">
+                <form class="form" action="" method="">
                     <div class="mt-4">
                         <h4>Question 1</h4>
                         <h6> Your mind is always buzzing with unexplored ideas and plans.</h6>
-                        <select class="choice" id="Question1" required>
+                        <select class="choice" id="question1" required>
                             <option selected>Select an Option ...</option>
                             <option value="1">1(Strongly Disagree)</option>
                             <option value="2">2</option>
@@ -41,7 +47,7 @@
                     <div class="mt-4">
                         <h4>Question 2</h4>
                         <h6>Generally speaking, you rely more on your experience than your imagination.</h6>
-                        <select class="choice" id="Question2" required>
+                        <select class="choice" id="question2" required>
                             <option selected>Select an Option ...</option>
                             <option value="1">1(Strongly Disagree)</option>
                             <option value="2">2</option>
@@ -53,7 +59,7 @@
                     <div class="mt-4">
                         <h4>Question 3</h4>
                         <h6>You find it easy to stay relaxed and focused even when there is some pressure.</h6>
-                        <select class="choice" id="Question3">
+                        <select class="choice" id="question3">
                             <option selected>Select an Option ...</option>
                             <option value="1">1(Strongly Disagree)</option>
                             <option value="2">2</option>
@@ -67,7 +73,7 @@
                     <div class="mt-4">
                         <h4>Question 4</h4>
                         <h6>You rarely do something just out of sheer curiosity.</h6>
-                        <select class="choice" id="Question4">
+                        <select class="choice" id="question4">
                             <option selected>Select an Option ...</option>
                             <option value="1">1(Strongly Disagree)</option>
                             <option value="2">2</option>
@@ -80,7 +86,7 @@
 
                         <h4>Question 5</h4>
                         <h6> People can rarely upset you.</h6>
-                        <select class="choice" id="Question5">
+                        <select class="choice" id="question5">
                             <option selected>Select an Option ...</option>
                             <option value="1">1(Strongly Disagree)</option>
                             <option value="2">2</option>
@@ -93,19 +99,19 @@
                     <div class="mt-4">
                         <h4>Question 6</h4>
                         <h6> It is often difficult for you to relate to other people’s feelings. </h6>
-                            <select class="choice" id="Question6">
-                                <option selected>Select an Option ...</option>
-                                <option value="1">1(Strongly Disagree)</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5(Strongly Agree)</option>
-                            </select>
+                        <select class="choice" id="question6">
+                            <option selected>Select an Option ...</option>
+                            <option value="1">1(Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5(Strongly Agree)</option>
+                        </select>
                     </div>
                     <div class="mt-4">
                         <h4>Question 7</h4>
                         <h6>In a discussion, truth should be more important than people’s sensitivities.</h6>
-                        <select class="choice" id="Question7">
+                        <select class="choice" id="question7">
                             <option selected>Select an Option ...</option>
                             <option value="1">1(Strongly Disagree)</option>
                             <option value="2">2</option>
@@ -118,7 +124,7 @@
                     <div class="mt-4">
                         <h4>Question 8</h4>
                         <h6> You rarely get carried away by fantasies and ideas.</h6>
-                        <select class="choice" id="Question8">
+                        <select class="choice" id="question8">
                             <option selected>Select an Option ...</option>
                             <option value="1">1(Strongly Disagree)</option>
                             <option value="2">2</option>
@@ -132,7 +138,7 @@
                         <h4>Question 9</h4>
                         <h6> You think that everyone’s views should be respected regardless of whether they are supported by facts
                             or not. </h6>
-                        <select class="choice" id="Question9">
+                        <select class="choice" id="question9">
                             <option selected>Select an Option ...</option>
                             <option value="1">1(Strongly Disagree)</option>
                             <option value="2">2</option>
@@ -145,7 +151,7 @@
                     <div class="mt-4">
                         <h4>Question 10</h4>
                         <h6>You feel more energetic after spending time with a group of people.</h6>
-                        <select class="choice" id="Question10">
+                        <select class="choice" id="question10">
                             <option selected>Select an Option ...</option>
                             <option value="1">1(Strongly Disagree)</option>
                             <option value="2">2</option>
@@ -155,26 +161,118 @@
                         </select>
                     </div>
                     <div class="mt-4 col-lg-12">
-                        <input type="submit" class="btn btn-primary btn-lg" />
+                        <input id="submit" type="submit" class="btn btn-primary btn-lg" />
                     </div>
                 </form>
             </div>
         </div>
     </div>
 
+<!-- modal  -->
+<div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">Friend Finder Match</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h2 id="name"></h2>
+              <img id="image" src="" >
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- x -->
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
         crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-        crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js" ></script>
+   
+   
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
         crossorigin="anonymous"></script>
 
+     <script type="text/javascript" src="./survey.js"></script>  
+
+     <!-- <script type="text/javascript">
+        var friends = [{
+            "name":"yo",
+            "score":[1,2,2,2,1,4,3,5,4,4]
+        },
+        {
+            "name":"yoni",
+            "score":[1,3,1,3,1,3,2,4,4,3]
+        },
+        {
+            "name":"tg",
+            "score":[1,2,2,2,1,2,2,4,3,3]
+        },
+        {
+            "name":"samri",
+            "score":[1,1,1,2,1,3,4,5,5,3]
+        }]
+        // var friends=required("../data/friends.json");
+
+        $("#submit").on("click", function (e) {
+            e.preventDefault();
+            var user = {
+                name: "",
+                photo: "",
+                score: []
+            }
+            var diffrence = [];
+            user.name = $("#name").val().trim();
+            user.photo = $("#photo").val().trim();
+
+            for (var i = 1; i < 11; i++) {
+                // debugger;
+                var choice = $("#question" + i).val();
+                (choice!=="Select an Option ...") ? user.score.push(parseInt(choice)) : user.score.push(3)
+
+            }
+            console.log(friends);
+            
+            var sum=[];
+             friends.forEach(element => {
+                var diffrence=[];
+                console.log(element.score , user.score)
+                for (var i = 0; i < element.score.length; i++) {
+                    
+                    diffrence.push(Math.abs(element.score[i] - user.score[i]))
+                    console.log(" element score "+ element.score[i]," user score " + user.score[i])
+                    console.log("diff" +diffrence);
+                }
+                sum.push(diffrence.reduce(getSum))
+                console.log(" diff "+ diffrence," sum " + sum)
+             });
+            function getSum(total, num) {
+                return total + num;
+            }
+          var index=sum.indexOf(Math.min(...sum));
+           console.log(friends[index].name);
+           user.name=friends[index].name;
+           user.photo=friends[index].photo;
 
 
+           $.post("/api/friends",user,function(data){
+               $("#name").text(data.name);
+               $("#image").attr('src',data.photo);
+               $(".modal").modal('show');
+
+           })
+        });
+
+    </script>  -->
 </body>
 
 </html>
