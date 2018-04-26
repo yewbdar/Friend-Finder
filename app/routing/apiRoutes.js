@@ -15,11 +15,6 @@ module.exports = function (app) {
   app.post("/api/friends", function (req, res) {
 
      var newUser = req.body;
-    //  {
-      // name=req.body.name,
-      // photo=req.body.photo,
-      // score=req.body.score
-    // }
     var matchFriend = {
       name: "",
       photo: ""
@@ -28,11 +23,11 @@ module.exports = function (app) {
     var sum = [];
     friends.forEach(element => {
       var diffrence = [];
-      console.log(element.score, user.score)
+      console.log(element.score, newUser.score)
       for (var i = 0; i < element.score.length; i++) {
 
         diffrence.push(Math.abs(element.score[i] - newUser.score[i]))
-        console.log(" element score " + element.score[i], " user score " + user.score[i])
+        console.log(" element score " + element.score[i], " user score " + newUser.score[i])
         console.log("diff" + diffrence);
       }
       sum.push(diffrence.reduce(getSum))
@@ -46,7 +41,8 @@ module.exports = function (app) {
 
     console.log("matchFriend " + matchFriend)
      res.json(matchFriend)
-    function getSum(total, num) {
+   
+     function getSum(total, num) {
       return total + num;
     }
 
