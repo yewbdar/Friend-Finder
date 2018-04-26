@@ -30,16 +30,16 @@
       ]
   },{
     "name":"Mikel Jackson",
-    "photo":"https://www.picsofcelebrities.com/celebrity/michael-jackson/pictures/large/michael-jackson-pictures.jpg",
+    "photo":"https://celebdial.s3.amazonaws.com/celeb_pic/michael-jackson.jpg",
     "scores":[
         5,
         1,
         4,
         4,
         5,
+        5,
         1,
-        1,
-        1,
+        5,
         4,
         1
       ]
@@ -52,9 +52,9 @@
         4,
         4,
         5,
+        3,
         5,
-        5,
-        5,
+        3,
         4,
         1
       ]
@@ -184,10 +184,10 @@
     "scores":[
         5,
         1,
-        4,
+        1,
         4,
         5,
-        5,
+        4,
         2,
         5,
         4,

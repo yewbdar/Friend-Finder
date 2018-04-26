@@ -1,4 +1,6 @@
+
 $(document).ready(function(){
+    
         $("#submit").on("click", function (e) {
             e.preventDefault();
             var newUser = {
@@ -28,8 +30,5 @@ $(document).ready(function(){
                $(".modal").modal('show');
 
             })
-
-        });
-
-
     });
+ });
