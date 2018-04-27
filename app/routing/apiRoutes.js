@@ -10,7 +10,7 @@ module.exports = function (app) {
   });
 
   app.post("/api/friends", function (req, res) {
-
+    
     var newUser = req.body;
     var matchFriend = {
       name: "",

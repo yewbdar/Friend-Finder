@@ -1,13 +1,13 @@
 
 $(document).ready(function () {
-
+    var newUser = {
+        name: "",
+        photo: "",
+        score: []
+    }
     $("#submit").on("click", function (e) {
         e.preventDefault();
-        var newUser = {
-            name: "",
-            photo: "",
-            score: []
-        }
+        
 
         if ($("#name").val().trim() === "") {
             alert("please insert your name ")
@@ -31,6 +31,14 @@ $(document).ready(function () {
             $("#image").attr('src', data.photo);
             $(".modal").modal('show');
 
-        })
+            newUser.name="";
+            newUser.photo="";
+            newUser.score=[];
+        });
+        
     });
+
+
+
+     
 });
