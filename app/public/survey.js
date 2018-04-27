@@ -1,5 +1,5 @@
 
-$(document).ready(function(){
+ $(document).ready(function(){
     
         $("#submit").on("click", function (e) {
             e.preventDefault();
@@ -25,7 +25,10 @@ $(document).ready(function(){
 
             }
            $.post("api/friends",newUser,function(data){
-               $("#name").text(data.name);
+               
+            // alert("hallu");
+            
+              $("#nameOfFriend").html(data.name);
                $("#image").attr('src',data.photo);
                $(".modal").modal('show');
 
