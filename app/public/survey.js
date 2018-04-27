@@ -1,37 +1,36 @@
 
- $(document).ready(function(){
-    
-        $("#submit").on("click", function (e) {
-            e.preventDefault();
-            var newUser = {
-                name: "",
-                photo: "",
-                score: []
-            }
+$(document).ready(function () {
 
-            if($("#name").val().trim() === ""){
-                 alert("please insert your name ")}
-                 else{ newUser.name = $("#name").val().trim()}
+    $("#submit").on("click", function (e) {
+        e.preventDefault();
+        var newUser = {
+            name: "",
+            photo: "",
+            score: []
+        }
 
-            if($("#photo").val().trim() === ""){
-                 alert("please insert your photo link ")}
-                 else{ newUser.name = $("#photo").val().trim()}
+        if ($("#name").val().trim() === "") {
+            alert("please insert your name ")
+        }
+        else { newUser.name = $("#name").val().trim() }
+
+        if ($("#photo").val().trim() === "") {
+            alert("please insert your photo link ")
+        }
+        else { newUser.name = $("#photo").val().trim() }
 
 
-            for (var i = 1; i < 11; i++) {
-                
-                var choice = $("#question" + i).val();
-                (choice!=="Select an Option ...") ? newUser.score.push(parseInt(choice)) : newUser.score.push(3)
+        for (var i = 1; i < 11; i++) {
 
-            }
-           $.post("api/friends",newUser,function(data){
-               
-            // alert("hallu");
-            
-              $("#nameOfFriend").html(data.name);
-               $("#image").attr('src',data.photo);
-               $(".modal").modal('show');
+            var choice = $("#question" + i).val();
+            (choice !== "Select an Option ...") ? newUser.score.push(parseInt(choice)) : newUser.score.push(3)
 
-            })
+        }
+        $.post("api/friends", newUser, function (data) {
+            $("#nameOfFriend").html(data.name);
+            $("#image").attr('src', data.photo);
+            $(".modal").modal('show');
+
+        })
     });
- });
+});
